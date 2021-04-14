@@ -25,3 +25,10 @@ Route::get('/about', function () {
 Route::get('/memory', function () {
     return view('memory');
 })->name('memory');
+Route::get('/memory/submit', function () {
+    return view('memory/submit');
+})->name('memory/submit');
+Route::post('/memory/confirm', 'ImageController@upload')->name('memory/confirm');
+Route::post('/memory/complete', function () {
+    return view('memory/complete');
+})->name('memory/complete');
