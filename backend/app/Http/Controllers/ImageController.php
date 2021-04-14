@@ -15,7 +15,6 @@ class ImageController extends Controller{
         return view("memory/confirm", compact('image'));
     }
     public function complete(Request $request){
-        $this->image;
         if($image) {
             //画像の保存に成功したらDBに記録する
             if($path){
@@ -24,8 +23,6 @@ class ImageController extends Controller{
                 ]);
             }
         }
-        $confirm = new ImageController();
-        $confirm ->image=$request->file('image');
         return view("memory/complete");
         }
 
